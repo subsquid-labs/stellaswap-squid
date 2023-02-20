@@ -1,0 +1,1068 @@
+export const ABI_JSON = [
+    {
+        "type": "constructor",
+        "payable": false,
+        "inputs": [
+            {
+                "type": "address",
+                "name": "_stella"
+            },
+            {
+                "type": "uint256",
+                "name": "_stellaPerBlock"
+            },
+            {
+                "type": "address",
+                "name": "_teamAddress"
+            },
+            {
+                "type": "address",
+                "name": "_treasuryAddress"
+            },
+            {
+                "type": "address",
+                "name": "_investorAddress"
+            },
+            {
+                "type": "uint256",
+                "name": "_teamPercent"
+            },
+            {
+                "type": "uint256",
+                "name": "_treasuryPercent"
+            },
+            {
+                "type": "uint256",
+                "name": "_investorPercent"
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "anonymous": false,
+        "name": "AllocPointsUpdated",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "caller",
+                "indexed": true
+            },
+            {
+                "type": "uint256",
+                "name": "previousAmount",
+                "indexed": false
+            },
+            {
+                "type": "uint256",
+                "name": "newAmount",
+                "indexed": false
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "anonymous": false,
+        "name": "Deposit",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "user",
+                "indexed": true
+            },
+            {
+                "type": "uint256",
+                "name": "pid",
+                "indexed": true
+            },
+            {
+                "type": "uint256",
+                "name": "amount",
+                "indexed": false
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "anonymous": false,
+        "name": "EmergencyWithdraw",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "user",
+                "indexed": true
+            },
+            {
+                "type": "uint256",
+                "name": "pid",
+                "indexed": true
+            },
+            {
+                "type": "uint256",
+                "name": "amount",
+                "indexed": false
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "anonymous": false,
+        "name": "EmissionRateUpdated",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "caller",
+                "indexed": true
+            },
+            {
+                "type": "uint256",
+                "name": "previousAmount",
+                "indexed": false
+            },
+            {
+                "type": "uint256",
+                "name": "newAmount",
+                "indexed": false
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "anonymous": false,
+        "name": "MetaTxnsDisabled",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "caller",
+                "indexed": true
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "anonymous": false,
+        "name": "MetaTxnsEnabled",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "caller",
+                "indexed": true
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "anonymous": false,
+        "name": "OperatorTransferred",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "previousOperator",
+                "indexed": true
+            },
+            {
+                "type": "address",
+                "name": "newOperator",
+                "indexed": true
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "anonymous": false,
+        "name": "OwnershipTransferred",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "previousOwner",
+                "indexed": true
+            },
+            {
+                "type": "address",
+                "name": "newOwner",
+                "indexed": true
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "anonymous": false,
+        "name": "RewardLockedUp",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "user",
+                "indexed": true
+            },
+            {
+                "type": "uint256",
+                "name": "pid",
+                "indexed": true
+            },
+            {
+                "type": "uint256",
+                "name": "amountLockedUp",
+                "indexed": false
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "anonymous": false,
+        "name": "SetInvestorAddress",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "oldAddress",
+                "indexed": true
+            },
+            {
+                "type": "address",
+                "name": "newAddress",
+                "indexed": true
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "anonymous": false,
+        "name": "SetInvestorPercent",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "oldPercent",
+                "indexed": false
+            },
+            {
+                "type": "uint256",
+                "name": "newPercent",
+                "indexed": false
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "anonymous": false,
+        "name": "SetTeamAddress",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "oldAddress",
+                "indexed": true
+            },
+            {
+                "type": "address",
+                "name": "newAddress",
+                "indexed": true
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "anonymous": false,
+        "name": "SetTeamPercent",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "oldPercent",
+                "indexed": false
+            },
+            {
+                "type": "uint256",
+                "name": "newPercent",
+                "indexed": false
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "anonymous": false,
+        "name": "SetTreasuryAddress",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "oldAddress",
+                "indexed": true
+            },
+            {
+                "type": "address",
+                "name": "newAddress",
+                "indexed": true
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "anonymous": false,
+        "name": "SetTreasuryPercent",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "oldPercent",
+                "indexed": false
+            },
+            {
+                "type": "uint256",
+                "name": "newPercent",
+                "indexed": false
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "anonymous": false,
+        "name": "Withdraw",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "user",
+                "indexed": true
+            },
+            {
+                "type": "uint256",
+                "name": "pid",
+                "indexed": true
+            },
+            {
+                "type": "uint256",
+                "name": "amount",
+                "indexed": false
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "MAXIMUM_DEPOSIT_FEE_RATE",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint16"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "MAXIMUM_HARVEST_INTERVAL",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "add",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_allocPoint"
+            },
+            {
+                "type": "address",
+                "name": "_lpToken"
+            },
+            {
+                "type": "uint16",
+                "name": "_depositFeeBP"
+            },
+            {
+                "type": "uint256",
+                "name": "_harvestInterval"
+            },
+            {
+                "type": "bool",
+                "name": "_withUpdate"
+            },
+            {
+                "type": "uint256",
+                "name": "_lockDownDuration"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "canHarvest",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_pid"
+            },
+            {
+                "type": "address",
+                "name": "_user"
+            }
+        ],
+        "outputs": [
+            {
+                "type": "bool"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "deposit",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_pid"
+            },
+            {
+                "type": "uint256",
+                "name": "_amount"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "disableMetaTxns",
+        "constant": false,
+        "payable": false,
+        "inputs": [],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "emergencyWithdraw",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_pid"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "enableMetaTxns",
+        "constant": false,
+        "payable": false,
+        "inputs": [],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "getMultiplier",
+        "constant": true,
+        "stateMutability": "pure",
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_from"
+            },
+            {
+                "type": "uint256",
+                "name": "_to"
+            }
+        ],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "harvestMany",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256[]",
+                "name": "_pids"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "investorAddress",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "investorPercent",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "isTrustedForwarder",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [
+            {
+                "type": "address",
+                "name": "forwarder"
+            }
+        ],
+        "outputs": [
+            {
+                "type": "bool"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "massUpdatePools",
+        "constant": false,
+        "payable": false,
+        "inputs": [],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "metaTxnsEnabled",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "bool"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "operator",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "owner",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "pendingStella",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_pid"
+            },
+            {
+                "type": "address",
+                "name": "_user"
+            }
+        ],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "poolInfo",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "type": "address",
+                "name": "lpToken"
+            },
+            {
+                "type": "uint256",
+                "name": "allocPoint"
+            },
+            {
+                "type": "uint256",
+                "name": "lastRewardBlock"
+            },
+            {
+                "type": "uint256",
+                "name": "accStellaPerShare"
+            },
+            {
+                "type": "uint16",
+                "name": "depositFeeBP"
+            },
+            {
+                "type": "uint256",
+                "name": "harvestInterval"
+            },
+            {
+                "type": "uint256",
+                "name": "totalLp"
+            },
+            {
+                "type": "uint256",
+                "name": "lockDownDuration"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "poolLength",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "renounceOwnership",
+        "constant": false,
+        "payable": false,
+        "inputs": [],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "set",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_pid"
+            },
+            {
+                "type": "uint256",
+                "name": "_allocPoint"
+            },
+            {
+                "type": "uint16",
+                "name": "_depositFeeBP"
+            },
+            {
+                "type": "uint256",
+                "name": "_harvestInterval"
+            },
+            {
+                "type": "uint256",
+                "name": "_lockDownDuration"
+            },
+            {
+                "type": "bool",
+                "name": "_withUpdate"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "setInvestorAddress",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "address",
+                "name": "_investorAddress"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "setInvestorPercent",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_newInvestorPercent"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "setTeamAddress",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "address",
+                "name": "_teamAddress"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "setTeamPercent",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_newTeamPercent"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "setTreasuryAddr",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "address",
+                "name": "_treasuryAddress"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "setTreasuryPercent",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_newTreasuryPercent"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "startBlock",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "startFarming",
+        "constant": false,
+        "payable": false,
+        "inputs": [],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "stella",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "stellaPerBlock",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "teamAddress",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "teamPercent",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "totalAllocPoint",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "totalLockedUpRewards",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "totalStellaInPools",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "transferOperator",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "address",
+                "name": "newOperator"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "transferOwnership",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "address",
+                "name": "newOwner"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "treasuryAddress",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "treasuryPercent",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "updateAllocPoint",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_pid"
+            },
+            {
+                "type": "uint256",
+                "name": "_allocPoint"
+            },
+            {
+                "type": "bool",
+                "name": "_withUpdate"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "updateEmissionRate",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_stellaPerBlock"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "updatePool",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_pid"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "userInfo",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256"
+            },
+            {
+                "type": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": "amount"
+            },
+            {
+                "type": "uint256",
+                "name": "rewardDebt"
+            },
+            {
+                "type": "uint256",
+                "name": "rewardLockedUp"
+            },
+            {
+                "type": "uint256",
+                "name": "nextHarvestUntil"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "name": "withdraw",
+        "constant": false,
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_pid"
+            },
+            {
+                "type": "uint256",
+                "name": "_amount"
+            }
+        ],
+        "outputs": []
+    },
+    {
+        "type": "function",
+        "name": "withdrawableAmount",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_pid"
+            },
+            {
+                "type": "address",
+                "name": "account"
+            }
+        ],
+        "outputs": [
+            {
+                "type": "uint256"
+            }
+        ]
+    }
+]
