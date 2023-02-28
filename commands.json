@@ -6,13 +6,8 @@
         "cmd": ["npx", "--yes", "rimraf", "lib"]
       },
       "generate": {
-        "description": "Generate a squid from an ABI file",
-        "cmd": ["squid-gen-abi"]
-      },
-      "squid-gen-abi": {
-        "description": "Generate a squid from an ABI file",
-        "cmd": ["squid-gen-abi"],
-        "hidden": true
+        "description": "Generate a squid from an squidgen config file",
+        "cmd": ["squid-gen", "config"]
       },
       "build": {
         "description": "Build the squid project",

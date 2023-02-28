@@ -1,0 +1,231 @@
+archive: moonbeam
+contracts:
+  - name: Factory
+    address: '0x68A384D826D3678f78BB9FB1533c7E9577dACc0E'
+    events: true
+    functions: true
+  - name: Router
+    address: '0xd0A01ec574D1fC6652eDF79cb2F880fd47D34Ab1'
+    events: true
+    functions: true
+  - name: Router v2.1
+    address: '0x70085a09D30D6f8C4ecF6eE10120d1847383BB57'
+    events: true
+    functions: true
+  - name: Swap For Gas
+    address: '0xb64dee2d182fed3dd6c273303fb08f11808c9c23'
+    events: true
+    functions: true
+  - name: Farms v1
+    address: '0xEDFB330F5FA216C9D2039B99C8cE9dA85Ea91c1E'
+    events: true
+    functions: true
+  - name: Farms v2 - Dual
+    address: '0xF3a5454496E26ac57da879bf3285Fa85DEBF0388'
+    events: true
+    functions: true
+  - name: Vaults
+    address: '0x54e2d14Df9348B3FBA7E372328595b9F3Ae243fE'
+    events: true
+    functions: true
+  - name: xStella
+    address: '0x06A3b410b681c82417A906993aCeFb91bAB6A080'
+    events: true
+    functions: true
+  - name: Locker
+    address: '0x8995066b7F1FB3Abe3c88040b677d03d607A0b58'
+    events: true
+    functions: true
+  - name: AVAX ILO
+    address: '0x96bef4719ae7c053113292e6aa7fc36e62b243e8'
+    events: true
+    functions: true
+  - name: MATIC - ILO
+    address: '0xfffa340944ff32f50c7935e2b5d22a7c3393b313'
+    events: true
+    functions: true
+  - name: FTM ILO
+    address: '0x096352f7ea415a336b41fc48b33142eff19a8ad8'
+    events: true
+    functions: true
+  - name: Stella Timelock
+    address: '0xC6F73B028CD3154a5bb87F49aA43aa259A6522fb'
+    events: true
+    functions: true
+  - name: Timelock Main
+    address: '0x9A8693c6f7Bf0f44e885118f3F83E2CdB4e611b8'
+    events: true
+    functions: true
+  - name: Zap
+    address: '0x01834cf26717f0351d9762cc9cca7dc059d140df'
+    events: true
+    functions: true
+  - name: Zap Helper
+    address: '0xe5870c6770d86d1cb91bb782986abf607be130d1'
+    events: true
+    functions: true
+  - name: Celr Rewarder
+    address: '0x05aD30253F0b20Be35d84253d6aca8bd7ec0C66C'
+    events: true
+    functions: true
+  - name: BCMC - Rewarder
+    address: '0x18e75887aa81e113636e18d5a78e3FF93787ec88'
+    events: true
+    functions: true
+  - name: USDC Rewarder
+    address: '0xa52123ADc0bC5c4C030D1FF4f5dAD966366a646c'
+    events: true
+    functions: true
+  - name: GLMR-Rewarder-First
+    address: '0x69F9D134991e141c4244F397514bA05d67861cc0'
+    events: true
+    functions: true
+  - name: ATOM-GLMR-GLMR-Rewarder
+    address: '0xE60c41DE5537418FDe05b804DF077397dFa84D75'
+    events: true
+    functions: true
+  - name: ATOM-USDC-GLMR-Rewarder
+    address: '0xe06E720aaed5f5B817cB3743108aE0a12fE69e9b'
+    events: true
+    functions: true
+  - name: CELER-Rewarder-0
+    address: '0xbEBD88782A1145b71dF3f4986eF7686154Ce01D9'
+    events: true
+    functions: true
+  - name: CELER-Rewarder-1
+    address: '0x70Cbd76ED57393E0Cd81e796dE850080C775d24f'
+    events: true
+    functions: true
+  - name: GLMR Rewarder for UST-GLMR
+    address: '0xC85DDCFF71200f9673137e2F93cE504bdbF7db4e'
+    events: true
+    functions: true
+  - name: ATOM-GLMR-Rewarder-New
+    address: '0x5Aa224966e302424ec13a4F51B80bCfc205984b6'
+    events: true
+    functions: true
+  - name: ATOM-USDC-Rewarder-New
+    address: '0x5546e272c67fac10719f1223b1c0212fa3e41a8f'
+    events: true
+    functions: true
+  - name: DualETH-GLMR-Rewarder
+    address: '0x2Ba130297d1966E077c2Fb5e4B434e8802925277'
+    events: true
+    functions: true
+  - name: CELER-REWARDER-01-02
+    address: '0x713f76076283fCd81BABe06c76Ff51485edF9D5E'
+    events: true
+    functions: true
+  - name: xcDOT - GLMR
+    address: '0xe76215efea540ea87a2e1a4bf63b1af6942481f3'
+    events: true
+    functions: true
+  - name: WBTC-USDT Contract
+    address: '0xcae51da6dceacd84f79df4b88d9f92035d1479e9'
+    events: true
+    functions: true
+  - name: xStella-USDC-Rewarder
+    address: '0xFA16d5b8bf03677945F0A750C8D2a30001B2FA93'
+    events: true
+    functions: true
+  - name: xStella-GLMR-Rewarder
+    address: '0x896135ff51debe8083a2e03f9d44b1d3c77a0324'
+    events: true
+    functions: true
+  - name: xStella-GLMR-Rewarder-2nd
+    address: '0xb4DBa7Fe6fCC613963d64204FCf789E9e376679A'
+    events: true
+    functions: true
+  - name: UST-GLMR - Rewarder
+    address: '0x556d9c067e7a0534564d55f394be0064993d2d3c'
+    events: true
+    functions: true
+  - name: ETH.mad-GLMR - Rewarder
+    address: '0x9fe074a56ffa7f4079c6190be6e8452911b7e349'
+    events: true
+    functions: true
+  - name: madUSDC-GLMR - Rewarder
+    address: '0x9200cb047a9c4b34a17ccf86334e3f434f948301'
+    events: true
+    functions: true
+  - name: Mistake in Rewarder - Rewarder
+    address: '0x168ceb7e49c21e3f37820a34590171214a765f5f'
+    events: true
+    functions: true
+  - name: madUSDC-GLMR - Rewarder 2
+    address: '0x2ad0e92461df950e2b1c72e2f7a865c81eaa3ce6'
+    events: true
+    functions: true
+  - name: DOT.xc-GLMR - Rewarder
+    address: '0x505b0a5458dd12605b84bb2928dd2bc5b44993b9'
+    events: true
+    functions: true
+  - name: ETH.mad-GLMR - Rewarder 2
+    address: '0xa6ec79c97e533e7bddb00898e22c6908742e039b'
+    events: true
+    functions: true
+  - name: SwapFlashLoan - DualETHPool - MultiNomad
+    address: '0xb86271571c90ad4E0C9776228437340b42623402'
+    events: true
+    functions: true
+  - name: SFL- 4 pool - Nomad
+    address: '0x422b5b7A15FB12c518AA29f9def640b4773427f8'
+    events: true
+    functions: true
+  - name: GLMR-MAI Vault
+    address: '0x3A82F4da24F93a32dc3C2A28cFA9D6E63EC28531'
+    events: true
+    functions: true
+  - name: Acala GLMR Rewarder
+    address: '0x9dE8171bEbfa577d6663b594C60841fE096eFF97'
+    events: true
+    functions: true
+  - name: Router v3
+    address: '0xe6d0ED3759709b743707DcfeCAe39BC180C981fe'
+    events: true
+    functions: true
+  - name: SFL-athUSDC-4pool
+    address: '0x715D7721Fa7e8616aE9D274704aF77857779f6F0'
+    events: true
+    functions: true
+  - name: Acala Rewarder
+    address: '0xB7B5d3659AD213478bc8bFB94D064d0efdda8F7c'
+    events: true
+    functions: true
+  - name: XStella-Mai Vault
+    address: '0x3756465c5b1C1C4cEe473880c9726E20875284f1'
+    events: true
+    functions: true
+  - name: MAI-4BP - WH
+    address: '0xF0A2ae65342f143fc09c83E5f19b706aBB37414D'
+    events: true
+    functions: true
+  - name: SFL - 4pool WH
+    address: '0xB1BC9f56103175193519Ae1540A0A4572b1566F6'
+    events: true
+    functions: true
+  - name: Interlay Rewarder
+    address: '0x3A7572220AfADdc31a72a520642111776D92B2D2'
+    events: true
+    functions: true
+  - name: SFL-MAI-4pool
+    address: '0x7fbe3126c03444d43fc403626ec81e3e809e6b46'
+    events: true
+    functions: true
+  - name: SFL-LP
+    address: '0xA0AA99F71033378864Ed6E499eb03612264e319a'
+    events: true
+    functions: true
+  - name: Stable Router
+    address: '0xB0Dfd6f3fdDb219E60fCDc1EA3D04B22f2FFa9Cc'
+    events: true
+    functions: true
+  - name: SFL-axlUSDC-4pool
+    address: '0xA1ffDc79f998E7fa91bA3A6F098b84c9275B0483'
+    events: true
+    functions: true
+  - name: Position Manager
+    address: '0x1FF2ADAa387dD27c22b31086E658108588eDa03a'
+    events: true
+    functions: true
+etherscanApi: https://api-moonbeam.moonscan.io

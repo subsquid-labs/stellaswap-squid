@@ -1,5 +1,5 @@
 manifestVersion: subsquid.io/v0.1
-name: stellaswap-squid
+name: hydra
 version: 1
 description: |-
   A squid indexer generated from an ABI template
@@ -7,6 +7,8 @@ build:
 deploy:
   addons:
     postgres:
+      config:
+        max_locks_per_transaction: 256
   processor:
     cmd: ["node", "lib/processor"]
   api:
